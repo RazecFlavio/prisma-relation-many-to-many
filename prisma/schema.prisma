@@ -19,11 +19,11 @@ model Courses {
 }
 
 model Modules {
-  id             String           @id @default(uuid())
-  name           String           @unique
-  description    String
-  created_at     DateTime         @default(now())
-  coursesmodules CoursesModules[]
+  id          String           @id @default(uuid())
+  name        String           @unique
+  description String
+  created_at  DateTime         @default(now())
+  courses     CoursesModules[]
 
   @@map("modules")
 }
